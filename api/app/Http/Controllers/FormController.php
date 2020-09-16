@@ -48,8 +48,8 @@ class FormController extends Controller
         ];
 
         Mail::send('emails.commercialPrice', $data, function ($message) use ($mailRequest) {
-            $message->to(config('mail.username'))->subject('From Commercial Price');
             $message->attach($mailRequest->file);
+            $message->to('lapkir94@gmail.com')->subject('From Commercial Price');
         });
 
         return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
