@@ -35,10 +35,9 @@ class FormController extends Controller
             'city' => $mailRequest->city,
         ];
 
-        Mail::send('emails.faq', $data, function ($message)  {
-            $message->to(config('mail.username'))->subject('From Get Price');
-        });
-        dd(232);
+//        Mail::send('emails.faq', $data, function ($message)  {
+//            $message->to(config('mail.username'))->subject('From Get Price');
+//        });
         return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
     }
 
