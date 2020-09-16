@@ -48,7 +48,7 @@ class FormController extends Controller
         ];
 
         Mail::send('emails.commercialPrice', $data, function ($message) use ($mailRequest) {
-            $message->attach($mailRequest->file);
+            $message->attachData($mailRequest->file, 'price.pdf');
             $message->to('lapkir94@gmail.com')->subject('From Commercial Price');
         });
 
