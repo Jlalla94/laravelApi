@@ -18,12 +18,13 @@ class FormController extends Controller
             'city' => $mailRequest->city,
         ];
 
-        Mail::send('emails.land.admin', $data, function ($message)  {
+        Mail::send('emails.faq', $data, function ($message)  {
             $message->to(config('mail.username'))->subject('From Get Price');
         });
 
         return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
     }
+
     public function priceForm(Request $mailRequest)
     {
         $data = [
@@ -34,7 +35,7 @@ class FormController extends Controller
             'city' => $mailRequest->city,
         ];
 
-        Mail::send('emails.land.admin', $data, function ($message)  {
+        Mail::send('emails.faq', $data, function ($message)  {
             $message->to(config('mail.username'))->subject('From Get Price');
         });
 
@@ -51,7 +52,7 @@ class FormController extends Controller
             'city' => $mailRequest->city,
         ];
 
-        Mail::send('emails.land.admin', $data, function ($message)  {
+        Mail::send('emails.faq', $data, function ($message)  {
             $message->to(config('mail.username'))->subject('From Get Price');
         });
 
