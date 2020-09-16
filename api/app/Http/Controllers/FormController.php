@@ -13,7 +13,7 @@ class FormController extends Controller
         $data = [
             'fullName' => $mailRequest->fullName,
             'phone' => $mailRequest->phone,
-            'message' => $mailRequest->message,
+            'msg' => $mailRequest->message,
         ];
 
         Mail::send('emails.faq', $data, function ($message)  {
@@ -44,7 +44,7 @@ class FormController extends Controller
         $data = [
             'fullName' => $mailRequest->fullName,
             'phone' => $mailRequest->phone,
-            'message' => $mailRequest->message,
+            'msg' => $mailRequest->message,
         ];
 
         Mail::send('emails.commercialPrice', $data, function ($message) use ($mailRequest) {

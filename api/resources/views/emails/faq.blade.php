@@ -9,6 +9,6 @@
     </li>
 
     <li>
-        Message: <strong>{{$message}}</strong>
+        Message: <strong>{{$msg}}</strong>
     </li>
 </ul>
