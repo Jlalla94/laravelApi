@@ -36,7 +36,7 @@ class FormController extends Controller
         ];
 
         Mail::send('emails.faq', $data, function ($message)  {
-            $message->to('test@cookies.com.ua')->subject('From Get Price');
+            $message->to('lapkir@gmail.com')->subject('From Get Price');
         });
         return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
     }
