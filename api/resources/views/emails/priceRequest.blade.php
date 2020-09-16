@@ -3,12 +3,16 @@
     <li>
         Name: <strong>{{$fullName}}</strong>
     </li>
-
+    <li>
+        Email: <strong>{{$email}}</strong>
+    </li>
     <li>
         Phone: <strong>{{$phone}}</strong>
     </li>
-
     <li>
-        Message: <strong>{{$message}}</strong>
+        Company: <strong>{{$company}}</strong>
+    </li>
+    <li>
+        City: <strong>{{$city}}</strong>
     </li>
 </ul>

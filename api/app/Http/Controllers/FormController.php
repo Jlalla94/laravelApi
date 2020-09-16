@@ -13,13 +13,11 @@ class FormController extends Controller
         $data = [
             'fullName' => $mailRequest->fullName,
             'phone' => $mailRequest->phone,
-            'email' => $mailRequest->email,
-            'company' => $mailRequest->company,
-            'city' => $mailRequest->city,
+            'message' => $mailRequest->message,
         ];
 
         Mail::send('emails.faq', $data, function ($message)  {
-            $message->to('lapkir94@gmail.com')->subject('From Get Price');
+            $message->to('lapkir94@gmail.com')->subject('From FAQ');
         });
 
         return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
@@ -35,7 +33,7 @@ class FormController extends Controller
             'city' => $mailRequest->city,
         ];
 
-        Mail::send('emails.faq', $data, function ($message)  {
+        Mail::send('emails.priceRequest', $data, function ($message)  {
             $message->to('lapkir94@gmail.com')->subject('From Get Price');
         });
         return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
@@ -46,13 +44,12 @@ class FormController extends Controller
         $data = [
             'fullName' => $mailRequest->fullName,
             'phone' => $mailRequest->phone,
-            'email' => $mailRequest->email,
-            'company' => $mailRequest->company,
-            'city' => $mailRequest->city,
+            'message' => $mailRequest->message,
         ];
 
-        Mail::send('emails.faq', $data, function ($message)  {
-            $message->to(config('mail.username'))->subject('From Get Price');
+        Mail::send('emails.commercialPrice', $data, function ($message) use ($mailRequest) {
+            $message->to(config('mail.username'))->subject('From Commercial Price');
+            $message->attach($mailRequest->file);
         });
 
         return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
