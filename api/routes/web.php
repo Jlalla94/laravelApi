@@ -24,8 +24,6 @@ use App\Http\Controllers\FormController;
 |
 */
 
-Route::post('/priceForm', 'FormController@priceForm');
-
 
 Route::get('/', function () {
     return view('welcome');

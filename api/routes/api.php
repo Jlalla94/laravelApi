@@ -13,4 +13,4 @@ use App\Http\Controllers\FormController;
 |
 */
 
-//Route::post('/priceForm',  [FormController::class, 'priceForm']);
+Route::post('/priceForm',  [FormController::class, 'priceForm']);
