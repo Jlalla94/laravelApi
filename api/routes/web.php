@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FormController;
-
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +25,7 @@ use App\Http\Controllers\FormController;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',  [LoginController::class, 'login'])->name('login');
+Route::post('/auth',  [LoginController::class, 'auth'])->name('auth');
+Route::get('/product',  [ProductController::class, 'list'])->name('product');
+
