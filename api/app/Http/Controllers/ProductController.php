@@ -41,7 +41,7 @@ class ProductController extends Controller
 
     public function update(Request $request, int $id){
 
-        if ($request->hasFile('image') && $request->file('image') !== Null) {
+        if ($request->hasFile('image')) {
             $path = Storage::putFileAs(
                 'products', $request->file('image'), $request->slug . '.' . $request->file('image')->getClientOriginalExtension()
             );
