@@ -36,14 +36,44 @@ class ProductController extends Controller
             'image_name' => $path
         ]);
 
-        return view('product.index', ['products' => 'http://api.volhov-ltd.com.ua/storage/app/' . Product::get()]);
+        return view('product.index', ['products' => Product::get()]);
+    }
+
+    public function update(Request $request, int $id){
+
+        if ($request->hasFile('image')) {
+            $path = Storage::putFileAs(
+                'products', $request->file('image'), $request->slug . '.' . $request->file('image')->getClientOriginalExtension()
+            );
+            Product::where('id', $id)->update([
+                'title' => $request->title,
+                'slug' => $request->slug,
+                'text' => $request->text,
+                'expiration_date' => $request->expiration_date,
+                'packaging_option' => $request->packaging_option,
+                'image_name' => $path
+            ]);
+        } else {
+            Product::where('id', $id)->update([
+                'title' => $request->title,
+                'slug' => $request->slug,
+                'text' => $request->text,
+                'expiration_date' => $request->expiration_date,
+                'packaging_option' => $request->packaging_option,
+            ]);
+        }
+
+        return view('product.index', ['products' => Product::get()]);
     }
 
     public function delete($id){
 
         $product = Product::where('id', $id)->first();
+        Storage::delete($product->image_name);
+        $product->delete();
 
-        return 200;
+        return view('product.index', ['products' => Product::get()]);
+
     }
 
     public function list(){
