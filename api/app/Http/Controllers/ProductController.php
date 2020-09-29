@@ -30,7 +30,7 @@ class ProductController extends Controller
             'text' => $request->text,
             'expiration_date' => $request->expiration_date,
             'packaging_option' => $request->packaging_option,
-            'image_name' =>
+            'image_name' => $path
         ]);
 
         return $path;
