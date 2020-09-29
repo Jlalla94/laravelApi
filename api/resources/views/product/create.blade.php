@@ -18,7 +18,7 @@
 </head><body>
 <div class="col-lg-10">
 
-    {!!Form::open(['url' => route('product.save'), 'files' => true])->post()!!}
+    {!!Form::open(['url' => '/product/save', 'files' => true])->post()!!}
 
     <h1>Продукт</h1>
 
