@@ -39,7 +39,7 @@
 @endforeach
 @if(count($products))
     <div class="media text-muted pt-3">
-    Нет продуктов
+    Нет продуктов {{count($products)}}
     </div>
 @endif
 </div>
