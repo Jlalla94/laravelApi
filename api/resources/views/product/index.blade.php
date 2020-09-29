@@ -24,7 +24,7 @@
     <div class="my-3 p-3 bg-white rounded box-shadow">
         <h6 class="border-bottom border-gray pb-2 mb-0">{{ $product->title }}</h6>
         <div class="media text-muted pt-3">
-            <img src="{{'http://api.volhov-ltd.com.ua/storage/app/' .  $product->image_name }}">
+            <img src="{{'http://api.volhov-ltd.com.ua/storage/app/' .  $product->image_name }} " width="200" height="100">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
                 {{ $product->text }}
                 <strong class="d-block text-gray-dark"> {{ $product->expiration_date }}</strong>
