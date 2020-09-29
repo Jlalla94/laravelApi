@@ -24,7 +24,7 @@ class ProductController extends Controller
 
     public function save(Request $request){
                 $path = Storage::putFileAs(
-            'products', $request->file('image'), $request->slug . $request->file('image')->getClientOriginalExtension()
+            'products', $request->file('image'), $request->slug . '.' . $request->file('image')->getClientOriginalExtension()
         );
 
         Product::create([
