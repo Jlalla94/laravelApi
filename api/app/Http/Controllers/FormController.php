@@ -47,13 +47,13 @@ class FormController extends Controller
             'phone' => $mailRequest->phone,
             'msg' => $mailRequest->message,
         ];
-        $file = new File($mailRequest->file('price'));
+        $path = new File($mailRequest->file('price'));
         Mail::send('emails.commercialPrice', $data, function ($message) use ($mailRequest) {
             $message->to('lapkir94@gmail.com')->subject('From Commercial Price');
-            $message->attachData(new File($mailRequest->file('price')), 'price.' . $mailRequest->file('price')->getClientOriginalExtension(), ['mime' => $mailRequest->file('price')->getMimeType()]);
+            $message->attach(new File($mailRequest->file('price')), 'price.' . $mailRequest->file('price')->getClientOriginalExtension(), ['mime' => $mailRequest->file('price')->getMimeType()]);
 
         });
 
-        return $file;
+        return $path;
     }
 }
