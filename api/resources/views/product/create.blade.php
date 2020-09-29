@@ -5,9 +5,8 @@
     {!!Form::open(['url' => route('product.create'), 'files' => true])->post()!!}
 
 
-    <fieldset>
 
-        <legend>Продукт</legend>
+        <h1>Продукт</h1>
 
         <!-- Email -->
         <div class="form-group">
@@ -63,7 +62,6 @@
             </div>
         </div>
 
-    </fieldset>
 
     {!! Form::close()  !!}
 
