@@ -28,8 +28,8 @@
                 {{ $product->text }}
                 <strong class="d-block text-gray-dark"> {{ $product->expiration_date }}</strong>
                 <strong class="d-block text-gray-dark"> {{ $product->packaging_option }}</strong>
-                <button class="primary" href="{{route('product.edit')}}"> Новый продукт</button>
-                <button class="primary" href="{{route('product.delete')}}"> Новый продукт</button>
+                <button class="primary" href="{{ '/product/edit/' . $product->id }}"> Редактировать продукт</button>
+                <button class="primary" href="{{ '/product/delete/' . $product->id }}"> Удалить продукт</button>
             </p>
         </div>
     </div>
