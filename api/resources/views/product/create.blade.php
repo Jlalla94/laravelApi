@@ -16,15 +16,17 @@
             integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
             crossorigin="anonymous"></script>
 </head><body>
-<div class="well">
+<div class="col-lg-10">
 
     {!!Form::open(['url' => route('product.create'), 'files' => true])->post()!!}
 
     <h1>Продукт</h1>
 
     <div class="form-group">
-        {!! Form::text('title', 'title')->placeholder('Название продукта')->lg()->required()->label( 'Титл:') !!}
+        <div class="col-lg-10">
 
+        {!! Form::text('title', 'title')->placeholder('Название продукта')->lg()->required()->label( 'Титл:') !!}
+        </div>
     </div>
 
     <div class="form-group">
