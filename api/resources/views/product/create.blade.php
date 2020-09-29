@@ -19,12 +19,12 @@
 <div class="well">
 
     {!!Form::open(['url' => route('product.create'), 'files' => true])->post()!!}
-    {!! Form::text('title', 'title')->placeholder('Название продукта')->lg()->required() !!}
 
     <h1>Продукт</h1>
 
     <div class="form-group">
-        {!! Form::label('title', 'Титл:', ['class' => 'col-lg-2 control-label']) !!}
+        {{ Form::label('title', 'Титл:', ['class' => 'col-lg-2 control-label']) }}
+        {{ Form::text('title', 'title')->placeholder('Название продукта')->lg()->required() }}
 
     </div>
 
