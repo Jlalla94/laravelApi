@@ -19,20 +19,20 @@ class ProductController extends Controller
 
     public function create(Request $request)
     {
-        $path = Storage::putFileAs(
-            'products', $request->file('image'), $request->slug . $request->file('image')->getClientOriginalExtension()
-        );
+//        $path = Storage::putFileAs(
+//            'products', $request->file('image'), $request->slug . $request->file('image')->getClientOriginalExtension()
+//        );
 
-        Product::create([
-            'title' => $request->title,
-            'slug' => $request->slug,
-            'text' => $request->text,
-            'expiration_date' => $request->expiration_date,
-            'packaging_option' => $request->packaging_option,
-            'image_name' => $path
-        ]);
+//        Product::create([
+//            'title' => $request->title,
+//            'slug' => $request->slug,
+//            'text' => $request->text,
+//            'expiration_date' => $request->expiration_date,
+//            'packaging_option' => $request->packaging_option,
+//            'image_name' => $path
+//        ]);
 
-        return $path;
+        return $request->hasFile('image');
     }
 
     public function save(Request $Request){
