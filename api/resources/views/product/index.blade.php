@@ -34,7 +34,7 @@
         </div>
     </div>
 @endforeach
-@if($products)
+@if(count($products))
     <div class="media text-muted pt-3">
     Нет продуктов
     </div>
