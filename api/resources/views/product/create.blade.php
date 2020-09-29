@@ -20,4 +20,3 @@
 
 </body>
 </html>
-'title', 'slug', 'text', 'expiration_date', 'packaging_option',
