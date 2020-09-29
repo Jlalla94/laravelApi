@@ -20,7 +20,7 @@ Route::post('/faqForm',  [FormController::class, 'faqForm']);
 
 Route::post('/sendCommercialPrice',  [FormController::class, 'sendCommercialPrice']);
 
-Route::post('/productList',  [ProductController::class, 'list']);
+Route::get('/productList',  [ProductController::class, 'list']);
 
-Route::post('/product/{slug}',  [ProductController::class, 'one']);
+Route::get('/product/{slug}',  [ProductController::class, 'one']);
 
