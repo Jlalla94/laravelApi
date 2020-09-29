@@ -18,9 +18,10 @@
 </head><body>
 <div class="col-lg-10">
 
-    {!!Form::open(['url' => route('product.create'), 'files' => true])->post()!!}
+    <form method="post" action="{{ route('product.create')}}" enctype="multipart/form-data">
 
     <h1>Продукт</h1>
+    {{ csrf_field() }}
 
     <div class="form-group">
         <div class="col-lg-10">
@@ -67,7 +68,7 @@
     </div>
 
 
-    {!!Form::close()!!}
+    </form>
 
 </div>
 </body>
