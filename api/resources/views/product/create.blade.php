@@ -26,7 +26,7 @@
     <div class="form-group">
         <div class="col-lg-10">
 
-        {!! Form::text('title', 'title')->placeholder('Название продукта')->lg()->required()->label( 'Титл:') !!}
+        {!! Form::text('title', 'Название')->placeholder('Название продукта')->lg()->required()->label( 'Титл:') !!}
         </div>
     </div>
 

@@ -26,31 +26,31 @@
         <div class="form-group">
             <div class="col-lg-10">
 
-                {!! Form::text('title', $product->title)->placeholder('Название продукта')->lg()->required()->label( 'Титл:') !!}
+                {!! Form::text('title', 'Название', $product->title)->placeholder('Название продукта')->lg()->required()->label( 'Титл:') !!}
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-lg-10">
-                {!! Form::text('slug', $product->slug)->placeholder('Урл продукта')->lg()->required() !!}
+                {!! Form::text('slug', 'Ссылка' , $product->slug)->placeholder('Урл продукта')->lg()->required() !!}
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-lg-10">
-                {!!Form::textarea('text', $product->text)->lg()->required()!!}
+                {!!Form::textarea('text', 'Описание продукта', $product->text)->lg()->required()!!}
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-lg-10">
-                {!!Form::text('expiration_date', $product->expiration_date)->lg()->required()->type('number')!!}
+                {!!Form::text('expiration_date', 'Термин', $product->expiration_date)->lg()->required()->type('number')!!}
 
             </div>
         </div>
         <div class="form-group">
             <div class="col-lg-10">
-                {!!Form::text('packaging_option', $product->packaging_option)->placeholder('Варианты упаковки')->lg()->required()!!}
+                {!!Form::text('packaging_option', 'Варианты упаковки', $product->packaging_option)->placeholder('Варианты упаковки')->lg()->required()!!}
 
             </div>
         </div>
