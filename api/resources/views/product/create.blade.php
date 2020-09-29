@@ -64,7 +64,7 @@
     <div class="form-group">
         <div class="col-lg-10 col-lg-offset-2">
             {!!Form::submit("Сохранить")!!}
-            <a href="{{route('product')}}" class="btn-primary btn">назад</a>
+            <a href="{{route('product.index')}}" class="btn-primary btn">назад</a>
         </div>
     </div>
 
