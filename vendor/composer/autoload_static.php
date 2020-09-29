@@ -84,6 +84,10 @@ class ComposerStaticInit7f0796f0f1f83f3651b030499ebe8679
         array (
             'Opis\\Closure\\' => 13,
         ),
+        'N' => 
+        array (
+            'NetoJose\\Bootstrap4Forms\\' => 25,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -272,6 +276,10 @@ class ComposerStaticInit7f0796f0f1f83f3651b030499ebe8679
         'Opis\\Closure\\' => 
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
+        ),
+        'NetoJose\\Bootstrap4Forms\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/netojose/laravel-bootstrap-4-forms/src',
         ),
         'Monolog\\' => 
         array (
