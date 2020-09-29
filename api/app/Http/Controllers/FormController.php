@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\File;
 
 class FormController extends Controller
 {
@@ -48,10 +49,10 @@ class FormController extends Controller
         ];
 
         Mail::send('emails.commercialPrice', $data, function ($message) use ($mailRequest) {
-            $message->attachData($mailRequest->file('price'), 'price.png');
+            $message->attachData(new File($mailRequest->file('price')), 'price', ['mime' => $mailRequest->file('price')->getMimeType()]);
             $message->to('lapkir94@gmail.com')->subject('From Commercial Price');
         });
 
-        return response()->json(['message' => json_encode($mailRequest->file('price')->getMimeType())], Response::HTTP_OK);
+        return response()->json(['message' => json_encode($mailRequest->hasFile('price'))], Response::HTTP_OK);
     }
 }
