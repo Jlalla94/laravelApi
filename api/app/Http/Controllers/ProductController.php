@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\Types\Integer;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -22,7 +22,6 @@ class ProductController extends Controller
         $path = Storage::putFileAs(
             'products', $request->file('image'), $request->slug . $request->file('image')->getClientOriginalExtension()
         );
-
 
         Product::create([
             'title' => $request->title,
