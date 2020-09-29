@@ -26,7 +26,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect('product.index');
+            return redirect()->route('product.index');
         }
     }
 }
