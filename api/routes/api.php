@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,3 +19,8 @@ Route::post('/priceForm',  [FormController::class, 'priceForm']);
 Route::post('/faqForm',  [FormController::class, 'faqForm']);
 
 Route::post('/sendCommercialPrice',  [FormController::class, 'sendCommercialPrice']);
+
+Route::post('/productList',  [ProductController::class, 'list']);
+
+Route::post('/product/{slug}',  [ProductController::class, 'one']);
+

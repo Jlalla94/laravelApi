@@ -7,15 +7,15 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-
     /**
      * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function login(Request $request)
     {
         return view('login');
     }
+
     /**
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
