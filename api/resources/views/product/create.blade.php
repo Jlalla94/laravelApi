@@ -9,13 +9,16 @@
 
     <div class="form-group">
         {!! Form::label('title', 'Титл:', ['class' => 'col-lg-2 control-label']) !!}
-            {!!Form::text('title', 'Титл')->placeholder('Название продукта')->lg()->required()!!}
+        <div class="col-lg-10">
+            {!! Form::text('title', 'title')->placeholder('Название продукта')->lg()->required() !!}
+        </div>
+
     </div>
 
     <div class="form-group">
         {!! Form::label('slug', 'Ссылка:', ['class' => 'col-lg-2 control-label']) !!}
         <div class="col-lg-10">
-            {!!Form::text('slug', 'Ссылка')->placeholder('Урл продукта')->lg()->required()!!}
+            {!! Form::text('slug', 'Ссылка')->placeholder('Урл продукта')->lg()->required() !!}
         </div>
     </div>
 
