@@ -19,7 +19,11 @@ class ProductController extends Controller
 
     public function create(Request $request)
     {
-//        $path = Storage::putFileAs(
+        return view('product.create');
+    }
+
+    public function save(Request $request){
+        //        $path = Storage::putFileAs(
 //            'products', $request->file('image'), $request->slug . $request->file('image')->getClientOriginalExtension()
 //        );
 
@@ -32,11 +36,7 @@ class ProductController extends Controller
 //            'image_name' => $path
 //        ]);
 
-          return response()->json(['data' => $request->hasFile('image')]);
-    }
-
-    public function save(Request $Request){
-        return 200;
+        return response()->json(['data' => $request->hasFile('image')]);
     }
 
     public function delete($id){
