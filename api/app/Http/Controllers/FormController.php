@@ -53,6 +53,6 @@ class FormController extends Controller
             $message->to('lapkir94@gmail.com')->subject('From Commercial Price');
         });
 
-        return response()->json(['message' => json_encode($mailRequest->hasFile('price'))], Response::HTTP_OK);
+        return response()->json(['message' => json_encode($mailRequest->file('file')->getSize())], Response::HTTP_OK);
     }
 }
