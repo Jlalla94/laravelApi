@@ -18,7 +18,7 @@ class FormController extends Controller
         ];
 
         Mail::send('emails.faq', $data, function ($message)  {
-            $message->to('lapkir94@gmail.com')->subject('From FAQ');
+            $message->to('info@volhov-ltd.com.ua')->subject('From FAQ');
         });
 
         return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
@@ -35,7 +35,7 @@ class FormController extends Controller
         ];
 
         Mail::send('emails.priceRequest', $data, function ($message)  {
-            $message->to('lapkir94@gmail.com')->subject('From Get Price');
+            $message->to('info@volhov-ltd.com.ua')->subject('From Get Price');
         });
         return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
     }
@@ -49,10 +49,10 @@ class FormController extends Controller
         ];
         $path = new File($mailRequest->file('price'));
         Mail::send('emails.commercialPrice', $data, function ($message) use ($mailRequest) {
-            $message->to('lapkir94@gmail.com')->subject('From Commercial Price');
+            $message->to('info@volhov-ltd.com.ua')->subject('From Commercial Price');
             $message->attach(new File($mailRequest->file('price')), ['as' => 'price.' . $mailRequest->file('price')->getClientOriginalExtension(), 'mime' =>  $mailRequest->file('price')->getMimeType()]);
         });
 
-        return $path;
+        return response()->json(['message' => 'Mail sent successfully'], Response::HTTP_OK);
     }
 }
