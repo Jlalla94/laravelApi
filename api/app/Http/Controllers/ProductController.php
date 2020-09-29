@@ -36,7 +36,7 @@ class ProductController extends Controller
             'image_name' => $path
         ]);
 
-        return view('product.index', ['products' => Product::get()]);
+        return view('product.index', ['products' => 'http://api.volhov-ltd.com.ua/storage/app/' . Product::get()]);
     }
 
     public function delete($id){
