@@ -23,20 +23,20 @@ class ProductController extends Controller
     }
 
     public function save(Request $request){
-        //        $path = Storage::putFileAs(
-//            'products', $request->file('image'), $request->slug . $request->file('image')->getClientOriginalExtension()
-//        );
+                $path = Storage::putFileAs(
+            'products', $request->file('image'), $request->slug . $request->file('image')->getClientOriginalExtension()
+        );
 
-//        Product::create([
-//            'title' => $request->title,
-//            'slug' => $request->slug,
-//            'text' => $request->text,
-//            'expiration_date' => $request->expiration_date,
-//            'packaging_option' => $request->packaging_option,
-//            'image_name' => $path
-//        ]);
+        Product::create([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'text' => $request->text,
+            'expiration_date' => $request->expiration_date,
+            'packaging_option' => $request->packaging_option,
+            'image_name' => $path
+        ]);
 
-        return response()->json(['data' =>  Input::File('image')]);
+        return response()->json(['msg' =>  $path]);
     }
 
     public function delete($id){
