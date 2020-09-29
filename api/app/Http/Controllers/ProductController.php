@@ -32,7 +32,7 @@ class ProductController extends Controller
 //            'image_name' => $path
 //        ]);
 
-        return $request->hasFile('image');
+          return response()->json(['data' => $request->hasFile('image')]);
     }
 
     public function save(Request $Request){
