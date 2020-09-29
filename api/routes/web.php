@@ -27,7 +27,9 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/',  [LoginController::class, 'login'])->name('login');
 Route::post('/auth',  [LoginController::class, 'authenticate'])->name('authenticate');
-Route::group(['middleware' => 'auth'], function () {
+Route::group([
+    'middleware' => 'auth',
+], function () {
     Route::get('/product', [ProductController::class, 'index'])->name('product.index');
     Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
     Route::get('/product/delete/{id}', [ProductController::class, 'save'])->name('product.delete');
