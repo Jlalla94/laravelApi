@@ -23,8 +23,7 @@
     <h1>Продукт</h1>
 
     <div class="form-group">
-        {{ Form::label('title', 'Титл:', ['class' => 'col-lg-2 control-label']) }}
-        {{ Form::text('title', 'title')->placeholder('Название продукта')->lg()->required() }}
+        {{ Form::text('title', 'title')->placeholder('Название продукта')->lg()->required()->label( 'Титл:') }}
 
     </div>
 
