@@ -47,7 +47,6 @@ class FormController extends Controller
             'phone' => $mailRequest->phone,
             'msg' => $mailRequest->message,
         ];
-        $path = new File($mailRequest->file('price'));
         Mail::send('emails.commercialPrice', $data, function ($message) use ($mailRequest) {
             $message->to('info@volhov-ltd.com.ua')->subject('From Commercial Price');
             $message->attach(new File($mailRequest->file('price')), ['as' => 'price.' . $mailRequest->file('price')->getClientOriginalExtension(), 'mime' =>  $mailRequest->file('price')->getMimeType()]);
