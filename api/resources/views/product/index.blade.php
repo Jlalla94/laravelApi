@@ -29,8 +29,8 @@
                 {{ $product->text }}
                 <strong class="d-block text-gray-dark"> {{ $product->expiration_date }}</strong>
                 <strong class="d-block text-gray-dark"> {{ $product->packaging_option }}</strong>
-                <button class="primary" href="{{ '/product/edit/' . $product->id }}"> Редактировать продукт</button>
-                <button class="primary" href="{{ '/product/delete/' . $product->id }}"> Удалить продукт</button>
+                <a class="btn btn-info" href="{{ '/product/edit/' . $product->id }}"> Редактировать продукт</a>
+                <a class="btn btn-danger" href="{{ '/product/delete/' . $product->id }}"> Удалить продукт</a>
             </p>
         </div>
     </div>
