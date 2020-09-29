@@ -60,12 +60,12 @@
 
     <div class="form-group">
         <div class="col-lg-10 col-lg-offset-2">
-            {!! Form::submit('Сохранить', ['class' => 'btn btn-lg btn-info pull-right'] ) !!}
+            {!!Form::submit("Сохранить")!!}
         </div>
     </div>
 
 
-    {!! Form::close()  !!}
+    {!!Form::close()!!}
 
 </div>
 </body>
