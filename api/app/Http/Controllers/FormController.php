@@ -48,7 +48,7 @@ class FormController extends Controller
         ];
 
         Mail::send('emails.commercialPrice', $data, function ($message) use ($mailRequest) {
-            $message->attachData($mailRequest->file('price'), 'price', ['mime' => $mailRequest->file('price')->getMimeType()]);
+            $message->attachData($mailRequest->file('price'), 'price.png');
             $message->to('lapkir94@gmail.com')->subject('From Commercial Price');
         });
 
