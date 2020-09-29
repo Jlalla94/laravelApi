@@ -19,7 +19,9 @@
 <body>
 
 <div class="container">
-    <a class="offset-9 btn btn-primary " href="{{route('product.create')}}"> Новый продукт</a>
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+     <a class="btn btn-primary " href="{{route('product.create')}}"> Новый продукт</a>
+    </div>
 
 @foreach($products as $product)
     <div class="my-3 p-3 bg-white rounded box-shadow">
