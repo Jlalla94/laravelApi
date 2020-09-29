@@ -35,7 +35,7 @@
 
     <div class="form-group">
         <div class="col-lg-10">
-            {!!Form::textarea('text', null,['class' => 'form-control', 'rows' => 3])->placeholder('Описание продукта')->lg()->required()!!}
+            {!!Form::textarea('text', 'Описание продукта')->lg()->required()!!}
         </div>
     </div>
 
