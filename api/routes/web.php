@@ -36,5 +36,5 @@ Route::group([
     Route::post('/product/save/{id}', [ProductController::class, 'save'])->name('product.save');
     Route::post('/product/update/{id}', [ProductController::class, 'save'])->name('product.update');
     Route::post('/product', [ProductController::class, 'save'])->name('product.save');
-});
+})->middleware('auth');
 
