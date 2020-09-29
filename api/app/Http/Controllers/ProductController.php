@@ -36,7 +36,7 @@ class ProductController extends Controller
             'image_name' => $path
         ]);
 
-        return response()->json(['msg' =>  $path]);
+        return view('product.index', ['products' => Product::get()]);
     }
 
     public function delete($id){
