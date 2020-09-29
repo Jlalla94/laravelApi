@@ -33,7 +33,7 @@ Route::group([
     Route::get('/product', [ProductController::class, 'index'])->name('product.index');
     Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
     Route::get('/product/delete/{id}', [ProductController::class, 'save'])->name('product.delete');
-    Route::post('/product/save', [ProductController::class, 'save'])->name('product.save');
+    Route::post('/product/create', [ProductController::class, 'save'])->name('product.save');
     Route::post('/product/update/{id}', [ProductController::class, 'save'])->name('product.update');
     Route::post('/product', [ProductController::class, 'save'])->name('product.save');
 });
