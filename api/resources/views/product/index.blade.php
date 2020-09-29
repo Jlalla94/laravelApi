@@ -17,11 +17,10 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="col-12">
-    <a class="offset-9 btn btn-primary " href="{{route('product.create')}}"> Новый продукт</a>
-</div>
 
 <div class="container">
+    <a class="offset-9 btn btn-primary " href="{{route('product.create')}}"> Новый продукт</a>
+
 @foreach($products as $product)
     <div class="my-3 p-3 bg-white rounded box-shadow">
         <h6 class="border-bottom border-gray pb-2 mb-0">{{ $product->title }}</h6>
