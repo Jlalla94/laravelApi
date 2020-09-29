@@ -17,7 +17,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<button class="primary" href="{{route('create.product')}}"> Новый продукт</button>
+<button class="primary" href="{{route('product.create')}}"> Новый продукт</button>
 @foreach($products as $product)
     <div class="my-3 p-3 bg-white rounded box-shadow">
         <h6 class="border-bottom border-gray pb-2 mb-0">{{ $product->title }}</h6>
@@ -27,8 +27,8 @@
                 {{ $product->text }}
                 <strong class="d-block text-gray-dark"> {{ $product->expiration_date }}</strong>
                 <strong class="d-block text-gray-dark"> {{ $product->packaging_option }}</strong>
-                <button class="primary" href="{{route('edit.product')}}"> Новый продукт</button>
-                <button class="primary" href="{{route('delete.product')}}"> Новый продукт</button>
+                <button class="primary" href="{{route('product.edit')}}"> Новый продукт</button>
+                <button class="primary" href="{{route('product.delete')}}"> Новый продукт</button>
             </p>
         </div>
     </div>

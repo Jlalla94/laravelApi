@@ -29,6 +29,6 @@ class LoginController extends Controller
             return redirect('product');
         }
 
-        return redirect('login');
+        return redirect('/');
     }
 }
