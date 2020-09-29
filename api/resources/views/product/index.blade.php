@@ -17,7 +17,9 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<a class="btn btn-primary" href="{{route('product.create')}}"> Новый продукт</a>
+<div class="col-12">
+    <a class="offset-9 btn btn-primary " href="{{route('product.create')}}"> Новый продукт</a>
+</div>
 
 <div class="container">
 @foreach($products as $product)
