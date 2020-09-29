@@ -36,7 +36,7 @@ class ProductController extends Controller
 //            'image_name' => $path
 //        ]);
 
-        return response()->json(['data' => $request->hasFile('image')]);
+        return response()->json(['data' =>  Input::File('image')]);
     }
 
     public function delete($id){

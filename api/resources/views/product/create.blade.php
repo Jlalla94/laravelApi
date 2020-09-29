@@ -18,7 +18,7 @@
 </head><body>
 <div class="col-lg-10">
 
-    {!!Form::open(['url' => route('product.create'), 'files' => true , 'enctype' => "multipart/form-data"])->post()!!}
+    {!!Form::open(['url' => route('product.create'), 'files' => true])->post()!!}
 
     <h1>Продукт</h1>
 
