@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="container">
-<button class="btn btn-primary" href="{{route('product.create')}}"> Новый продукт</button>
+<a class="btn btn-primary" href="{{route('product.create')}}"> Новый продукт</a>
 @foreach($products as $product)
     <div class="my-3 p-3 bg-white rounded box-shadow">
         <h6 class="border-bottom border-gray pb-2 mb-0">{{ $product->title }}</h6>
@@ -34,7 +34,7 @@
         </div>
     </div>
 @endforeach
-@if(empty($products))
+@if($products)
     <div class="media text-muted pt-3">
     Нет продуктов
     </div>
