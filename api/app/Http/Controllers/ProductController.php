@@ -17,9 +17,23 @@ class ProductController extends Controller
         return view('product.edit', ['product' => Product::where('id', $id)->first()]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        return view('product.create');
+        $path = Storage::putFileAs(
+            'products', $request->file('image'), $request->slug . $request->file('image')->getClientOriginalExtension()
+        );
+
+
+        Product::create([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'text' => $request->text,
+            'expiration_date' => $request->expiration_date,
+            'packaging_option' => $request->packaging_option,
+            'image_name' =>
+        ]);
+
+        return $path;
     }
 
     public function save(Request $Request){
